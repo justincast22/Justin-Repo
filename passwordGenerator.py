@@ -20,8 +20,9 @@ def password_generator():
         password.append(secrets.choice(full_pool))
     gen_password = "".join(password)
 
-    return gen_password, entropy
-
-def password_print(gen_password,entropy):
     print(f"Password: {gen_password}")
     print(f"Entropy: {entropy}")
+    
+    return gen_password, entropy
+
+password_generator()
