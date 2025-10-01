@@ -17,3 +17,4 @@ I'm a junior at the University of New Haven, pursuing a Bachelor's degree in Cyb
 ---
 
 ## Other Projects not on this repo
+- **LinuxCS(Cheat Sheet)**: A small cheat sheet for linux users
