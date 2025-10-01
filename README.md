@@ -18,4 +18,4 @@ I'm a junior at the University of New Haven, pursuing a Bachelor's degree in Cyb
 
 ## Other Projects not on this repo
 - **LinuxCS(Cheat Sheet)**: A small cheat sheet of commands for linux users
--- **Link**: https://github.com/justincast22/Linuxcs
+  - **Link**: https://github.com/justincast22/Linuxcs
