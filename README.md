@@ -4,7 +4,7 @@
 
 ## **Cybersecurity Student** | **Aspiring Security Professional** | **Tech Enthusiast**  
 
-I'm a junior at the University of New Haven, pursuing a Bachelor's degree in Cybersecurity and Networks. My passion lies in solving real-world security challenges and building innovative solutions with code.
+I'm a junior at the University of New Haven, pursuing a Bachelor's degree in Cybersecurity and Networks.
 
 ---
 
