@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>UNH Terry Rover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+<div class="dashboard-background">
+        <div class="dashboard">
+            <div class="page-title" id="title-widget">UNH Health Monitor</div>
+            <div class="widget" id="cpu-widget">
+                <p class= "widget-title" id="cpu-usage">CPU Usage</p>
+                <div class="cpu-stats">
+                    <p class="cpu-info-text" id="cpu-usage-text">Loading...</p>
+                    <p class="cpu-info-text" id="cpu-temp-text">Loading...</p>
+                    <p class="cpu-info-text" id="cpu-freq-text">Loading...</p>
+                </div>
+            </div>
+
+            <div class="widget" id="memory-widget">
+                <p class= "widget-title" id="memory-usage">Memory Usage</p>
+                <div class="memory-stats">
+                    <p class= "memory-info-text" id="memory-usage-text">Loading...</p>
+                </div>
+            </div>
+
+            <div class="widget" id="network-widget">
+                <p id="network-usage">Network Usage</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

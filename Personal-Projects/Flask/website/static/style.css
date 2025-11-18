@@ -1,0 +1,125 @@
+/* ====== GLOBAL PAGE SETTINGS ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #4A90E2;
+  color: white;
+  padding: 25px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* ====== DASHBOARD GRID ====== */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== WIDGET CARDS ====== */
+.widget {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.widget h2 {
+  margin-top: 0;
+  color: #4A90E2;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.widget p {
+  font-size: 1.1em;
+  margin: 8px 0;
+}
+
+/* ====== LIVE STATUS WIDGET STYLE ====== */
+.widget.live {
+  border-left: 6px solid #4A90E2;
+  padding-left: 15px;
+}
+
+/* ====== BUTTONS ====== */
+button {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: scale(1.03);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  margin-top: 50px;
+  padding: 15px 0;
+  background-color: #e9f3ff;
+  font-size: 14px;
+  color: #555;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+/* ====== RESPONSIVENESS ====== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .widget {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+/* ====== OPTIONAL ANIMATION FOR LIVE VALUES ====== */
+#cpu, #memory {
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#cpu.updated, #memory.updated {
+  color: #4A90E2;
+}
