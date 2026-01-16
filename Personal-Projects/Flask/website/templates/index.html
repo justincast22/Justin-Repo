@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGen - Password Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>SecureGen</h1>
+    <p>Generate strong, secure passwords instantly</p>
+    <button onclick="window.location.href='/about'">About</button>
+    <button onclick="window.location.href='/contact'">Email Reminder</button>
+</header>
+
+<main class="main_webpage">
+    <button onclick="window.location.href='/v2'">Chunk Password Format</button>
+    <button onclick="window.location.href='/'">Random Password Format</button>
+    <!-- Password Length -->
+    <div class="widget">
+        <h2>Password Length</h2>
+        <div id="number_input">
+            <input id="lengthInput" type="number" min="4" value="16">
+        </div>
+    </div>
+
+    <!-- Generate button -->
+    <div class="widget generate_btn">
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+
+    <!-- Output -->
+    <div class="widget">
+        <h2>Your Password</h2>
+        <div class="password_output" id="passwordOutput"></div>
+
+        <h2 style="margin-top: 15px;">Entropy</h2>
+        <div class="password_output" id="entropyOutput"></div>
+
+        <div class="generate_btn" style="margin-top: 15px;">
+            <button onclick="copyPassword()">Copy to Clipboard</button>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+<!--
+    SecureGen © 2025 — Simple, Secure, Smart.
+-->
+</footer>
+
+<!-- Load JS file -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

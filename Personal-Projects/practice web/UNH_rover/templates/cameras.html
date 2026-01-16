@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNH Terry Rover</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="dashboard-background">
+        <div class="dashboard">
+            <div class="page-title" id="title-widget">UNH Health Monitor(Cameras) </div>
+            <div class="change-button">
+                <button id="Jetson" onclick="window.location.href='/'">Jetson</button>
+                <button id="Arm" onclick="window.location.href='/arms'">Arm</button>
+                <button id="Treads" onclick="window.location.href='/treads'">Treads</button>
+                <button id="Cameras" onclick="window.location.href='/cameras'">Cameras</button>
+            </div>
+            </div>
+</div>
+</body>
+</html>

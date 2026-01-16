@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGen - Password Generator</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>SecureGen</h1>
+    <p>Generate strong, secure passwords instantly</p>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='/'">Home</button>
+        <button onclick="window.location.href='/about'">About</button>
+        <button onclick="window.location.href='/chunked'">Chunk Password Format</button>
+        <button onclick="window.location.href='/random'">Random Password Format</button>
+    </div>
+</header>
+
+<main class="main_webpage">
+
+    <h1>About SecureGen</h1>
+    <p>SecureGen is a fast and reliable password
+        generator designed to help you create strong,
+        secure passwords in seconds. Whether you prefer
+        a completely random string of characters or a more
+        readable, chunked format, SecureGen makes it easy to
+        protect your accounts and keep your digital life safe.
+        Built with security and simplicity in mind, our tool is
+        free to use and requires no personal information—just generate
+        and go!</p>
+</main>
+
+<footer>
+<!--
+    SecureGen © 2025 — Simple, Secure, Smart.
+-->
+</footer>
+
+<!-- Load JS file -->
+<script src="{{ url_for('static', filename='script_v2.js') }}"></script>
+
+</body>
+</html>
