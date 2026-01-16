@@ -1,125 +1,115 @@
-/* ====== GLOBAL PAGE SETTINGS ====== */
+/* ---- GLOBAL ---- */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7fa;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: #333;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f14;
+    color: white;
 }
 
-/* ====== HEADER ====== */
+h1, h2, p {
+    margin: 0;
+}
+
 header {
-  background-color: #4A90E2;
-  color: white;
-  padding: 25px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 30px;
+    background: #12121a;
+    border-bottom: 2px solid #2B72ED;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2em;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 header p {
-  font-size: 1.1em;
-  margin-top: 5px;
-  opacity: 0.9;
+    color: #c9c9c9;
 }
 
-/* ====== DASHBOARD GRID ====== */
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 25px;
-  max-width: 1200px;
-  margin: auto;
+/* ---- MAIN LAYOUT ---- */
+.main_webpage {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
 }
 
-/* ====== WIDGET CARDS ====== */
+/* ---- WIDGET CARDS ---- */
 .widget {
-  background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.widget:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    background: #161622;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(43, 114, 237, 0.15);
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .widget h2 {
-  margin-top: 0;
-  color: #4A90E2;
-  font-size: 1.3em;
-  margin-bottom: 10px;
+    color: #2B72ED;
+    margin-bottom: 10px;
 }
 
 .widget p {
-  font-size: 1.1em;
-  margin: 8px 0;
+    color: #cccccc;
 }
 
-/* ====== LIVE STATUS WIDGET STYLE ====== */
-.widget.live {
-  border-left: 6px solid #4A90E2;
-  padding-left: 15px;
+/* ---- INPUT FIELD ---- */
+#chuck_amount_input input,
+#chuck_size_input input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #2B72ED;
+    background: #0f0f14;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s ease;
 }
 
-/* ====== BUTTONS ====== */
-button {
-  background-color: #4A90E2;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+#chuck_amount_input input:focus,
+#chuck_size_input input:focus {
+    box-shadow: 0 0 10px #2B72ED;
 }
 
-button:hover {
-  background-color: #357ABD;
-  transform: scale(1.03);
+/* ---- BUTTON ---- */
+.generate_btn button {
+    width: 100%;
+    padding: 12px 15px;
+    background: #2B72ED;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/* ====== FOOTER ====== */
-footer {
-  margin-top: 50px;
-  padding: 15px 0;
-  background-color: #e9f3ff;
-  font-size: 14px;
-  color: #555;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+.generate_btn button:hover {
+    background: #1f5ac0;
 }
 
-/* ====== RESPONSIVENESS ====== */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.6em;
-  }
-
-  .widget {
+/* ---- PASSWORD OUTPUT ---- */
+.password_output {
+    margin-top: 15px;
     padding: 15px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 18px;
-  }
+    background: #0f0f14;
+    border: 1px solid #2B72ED;
+    border-radius: 10px;
+    word-wrap: break-word;
+    font-size: 1.1rem;
+    min-height: 25px;
+    color: #79a9ff;
 }
 
-/* ====== OPTIONAL ANIMATION FOR LIVE VALUES ====== */
-#cpu, #memory {
-  font-weight: bold;
-  color: #333;
-  transition: color 0.3s ease;
+/* ---- FOOTER ---- */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    color: #7b7b7b;
+    font-size: 0.9rem;
 }
 
-#cpu.updated, #memory.updated {
-  color: #4A90E2;
-}

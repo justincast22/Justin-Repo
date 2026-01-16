@@ -42,8 +42,7 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* ❌ You wrote .cpu_info (underscore) but HTML uses .cpu-stats (dash)
-   ✔ Fixed and updated */
+/**Stats styling**/
 .cpu-stats {
   border-radius: 12px;
   padding: 10px;
@@ -56,7 +55,6 @@ body {
   text-align: center;
 }
 
-/* --- Default Paragraph Styling --- */
 p {
   font-size: 25px;
   margin: 0;
@@ -64,8 +62,6 @@ p {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ❌ Your selector "cpu-info-text" was missing the dot and had a syntax error
-   ✔ Fixed */
 .cpu-info-text {
   font-family: 'Segoe UI', sans-serif;
   color: #dcdcdc;
@@ -76,4 +72,31 @@ p {
   font-family: 'Segoe UI', sans-serif;
   color: #dcdcdc;
   font-size: 18px;
+}
+
+.change-button {
+    grid-column: 1 / -1;        /* stretch across top like the title */
+    display: flex;
+    gap: 12px;
+    justify-content: center;    /* center the buttons */
+    margin-top: 20px;
+}
+
+#Jetson, #Arm, #Treads, #Cameras {
+    background-color: #143E80;       /* same dark-blue as widgets */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;             /* same curvature */
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    cursor: pointer;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);  /* same shadow as widgets */
+    transition: 0.2s ease;
+}
+
+#button1:hover, #button2:hover, #button3:hover {
+    background-color: #1e56b3;       /* lighter blue on hover */
+    transform: translateY(-2px);     /* slight float effect */
 }

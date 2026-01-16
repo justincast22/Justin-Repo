@@ -10,6 +10,18 @@ app = Flask(__name__, static_url_path='/static', static_folder='static')
 def home():
     return render_template("index.html")
 
+@app.route("/arms")
+def arms_page():
+    return render_template("arms.html")
+
+@app.route("/treads")
+def treads_page():
+    return render_template("treads.html")
+
+@app.route("/cameras")
+def cameras_page():
+    return render_template("cameras.html")
+
 @app.route('/cpu_usage')
 def cpu_usage():
     cpu_usage = psutil.cpu_percent(interval=1)
